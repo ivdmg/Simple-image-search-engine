@@ -1,0 +1,104 @@
+*{
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: #F0F0F3;
+}
+h1{
+    margin: 100px 0 30px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #728AB7;
+}
+form{
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50px;
+
+    box-shadow: -2.17893px -2.17893px 6.5368px #FFFFFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
+}
+form input{
+    flex: 1;
+    height: 100%;
+    outline: 0;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #728AB7;
+}
+form button{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #F0F0F3;
+    border: none;
+    color: #728AB7;
+    font-weight: 500;
+    border-radius: 50%;
+    box-shadow: inset -1px -1px 6px rgb(240, 240, 240), inset 1px 1px 6px rgba(174, 174, 192, 0.5);
+    cursor: pointer;
+}
+form button svg{
+    position: absolute;
+    left: 11px;
+    top: 11px;
+}
+form button:hover{
+    background-color: #e9e9e9;
+}
+form button:hover svg{
+    background-color: #e9e9e9;
+}
+#show-more-btn{
+    width: 200px;
+    height: 60px;
+    margin: 30px auto 100px;
+    border: none;
+    font-weight: 500;
+    font-size: 19px;
+    color: #728AB7;
+    border-radius: 20px;
+    box-shadow: -2.17893px -2.17893px 6.5368px #FFFFFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
+    display: none;
+}
+#show-more-btn:hover{
+    background-color: #ececec;
+    cursor: pointer;
+}
+#search-result{
+    width: 60%;
+    margin: 50px auto 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+.imageSubstrate{
+    padding: 20px;
+    box-shadow: -2.17893px -2.17893px 6.5368px #FFFFFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
+
+    border-radius: 20px;
+
+}
+.imageSubstrate:hover{
+    box-shadow: inset -1px -1px 6px rgb(240, 240, 240), inset 1px 1px 6px rgba(174, 174, 192, 0.5);
+    transition: 0.2s ease;
+}
+#search-result a{
+    background-color: transparent;
+}
+#search-result img{
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: .85;
+}
+.imageSubstrate:hover img{
+    transform: scale(0.99);
+}
