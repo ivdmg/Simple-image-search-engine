@@ -47,3 +47,31 @@ searchMoreBtn.addEventListener('click', ()=>{
     page++
     searchImage();
 })
+
+// ==================================================
+
+
+let currentTheme = localStorage.getItem("darkmode");
+const circleToggle = document.querySelector(".circle")
+const toggleDarkTheme = document.getElementById("circle")
+
+const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    circleToggle.classList.remove("sun");
+    circleToggle.classList.add("moon");
+    localStorage.setItem("darkmode", "active");
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+    circleToggle.classList.remove("moon");
+    circleToggle.classList.add("sun");
+    localStorage.setItem("darkmode", null);
+}
+
+if(currentTheme === "active") enableDarkMode();
+
+toggleDarkTheme.addEventListener("click", () => {
+    currentTheme = localStorage.getItem("darkmode");
+    currentTheme !== "active" ? enableDarkMode() : disableDarkMode();
+})
